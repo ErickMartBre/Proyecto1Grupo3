@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1 Grupo 3</title>
+    <style>
+
+        body
+        {
+            font-family: "Arial", sans-serif;
+        }
+        
+        table
+        {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th 
+        {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        input[type="text"]
+        {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Reporte de Actividad</h1>
+    <table>
+        <tr>
+            <td>Cliente:</td>
+            <td><input type="text" name="cliente"></td>
+            <td>Técnico:</td>
+            <td><input type="text" name="tecnico"></td>
+            <td>Fecha:</td>
+            <td><input type="date" name="fecha"></td>
+            <td>Nro de Incidencia:</td>
+            <td><input type="text" id="incidencia"></td>
+        </tr>
+    </table>
+
+    <script>
+            let numero= Math.floor(Math.random()* 9999 +1);
+            document.getElementById("incidencia").value = numero;
+            document.getElementById("incidencia").readOnly = true;
+        
+    </script>
+</body>
+</html>
