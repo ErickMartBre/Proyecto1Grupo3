@@ -3,55 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto 1 Grupo 3</title>
+    <title>Boleta de Servicio</title>
     <style>
-
-        body
-        {
+        body {
             font-family: "Arial", sans-serif;
         }
-        
-        table
-        {
+        table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
-
-        td, th 
-        {
+        td, th {
             border: 1px solid black;
             padding: 8px;
             text-align: left;
         }
-
-        input[type="text"]
-        {
+        input[type="text"], input[type="date"], input[type="time"] {
             width: 100%;
+            box-sizing: border-box;
         }
-
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        h3, h4 {
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Reporte de Actividad</h1>
-    <table>
-        <tr>
-            <td>Cliente:</td>
-            <td><input type="text" name="cliente"></td>
-            <td>Técnico:</td>
-            <td><input type="text" name="tecnico"></td>
-            <td>Fecha:</td>
-            <td><input type="date" name="fecha"></td>
-            <td>Nro de Incidencia:</td>
-            <td><input type="text" id="incidencia"></td>
-        </tr>
-    </table>
 
-    <script>
-            let numero= Math.floor(Math.random()* 9999 +1);
-            document.getElementById("incidencia").value = numero;
-            document.getElementById("incidencia").readOnly = true;
+    <div class="container">
+        <h3>Reporte de Actividad</h3>
+
+        <table>
+            <tr>
+                <td><label for="cliente">Cliente:</label></td>
+                <td><input type="text" id="cliente" name="cliente"></td>
+                <td><label for="tecnico">Técnico:</label></td>
+                <td><input type="text" id="tecnico" name="tecnico"></td>
+                <td><label for="fecha">Fecha:</label></td>
+                <td><input type="date" id="fecha" name="fecha"></td>
+                <td><label for="numero_incidencia">Nro de Incidencia:</label></td>
+                <td><input type="text" id="numero_incidencia" readonly></td>
+                <td><label for="numero_boleta">Nro Boleta:</label></td>
+                <td><input type="text" id="numero_boleta" readonly></td> 
+
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="modelo">Modelo:</label></td>
+                <td><input type="text" id="modelo" name="modelo"></td>
+                <td><label for="serie">Serie:</label></td>
+                <td><input type="text" id="serie" name="serie"></td>
+                <td><label for="motivo_servicio">Motivo del Servicio:</label></td>
+                <td colspan="3"><input type="text" id="motivo_servicio" name="motivo_servicio"></td>
+            </tr>
+            <tr>
+                <td><label for="condicion">Condición del equipo:</label></td>
+                <td colspan="3"><input type="text" id="condicion" name="condicion"></td>
+                <td><label for="accion">Acción tomada:</label></td>
+                <td colspan="3"><input type="text" id="accion" name="accion"></td>
+            </tr>
+            <tr>
+                <td><label for="ubicacion_falla">Ubicación de la falla:</label></td>
+                <td colspan="3"><input type="text" id="ubicacion_falla" name="ubicacion_falla"></td>
+                <td><label for="tipo_falla">Tipo de falla:</label></td>
+                <td colspan="3"><input type="text" id="tipo_falla" name="tipo_falla"></td>
+            </tr>
+            <tr>
+                <td><label for="hora_inicial_viaje">Hora inicial de viaje:</label></td>
+                <td><input type="time" id="hora_inicial_viaje" name="hora_inicial_viaje"></td>
+                <td><label for="hora_final_viaje">Hora final de viaje:</label></td>
+                <td><input type="time" id="hora_final_viaje" name="hora_final_viaje"></td>
+                <td><label for="hora_inicial_trabajo">Hora inicial de trabajo:</label></td>
+                <td><input type="time" id="hora_inicial_trabajo" name="hora_inicial_trabajo"></td>
+                <td><label for="hora_final_trabajo">Hora final de trabajo:</label></td>
+                <td><input type="time" id="hora_final_trabajo" name="hora_final_trabajo"></td>
+            </tr>
+        </table>
+
+        <h4>Repuestos</h4>
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="codigo_repuesto"></td>
+                <td><input type="text" name="descripcion_repuesto"></td>
+                <td><input type="text" name="cantidad_repuesto"></td>
+                <td><input type="text" name="estado_repuesto"></td>
+            </tr>
+            <!-- Agregar más filas si es necesario -->
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="contometro_inicial">Contómetro Inicial:</label></td>
+                <td><input type="text" id="contometro_inicial" name="contometro_inicial"></td>
+                <td><label for="contometro_final">Contómetro Final:</label></td>
+                <td><input type="text" id="contometro_final" name="contometro_final"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Proformar repuestos:</td>
+                <td><input type="radio" name="opciones" value="proformar_repuestos"></td>
+                <td>Facturar mano de obra:</td>
+                <td><input type="radio" name="opciones" value="facturar_mano_obra"></td>
+                <td>Máquina Operativa:</td>
+                <td><input type="radio" name="opciones" value="maquina_operativa"></td>
+            </tr>
+        </table>
         
-    </script>
+        <h4>Mediciones de voltaje</h4>
+        <table>
+            <tr>
+                <td><label for="vn">V-N:</label></td>
+                <td><input type="text" id="vn" name="vn"></td>
+                <td><label for="nt">N-T:</label></td>
+                <td><input type="text" id="nt" name="nt"></td>
+                <td><label for="vt">V-T:</label></td>
+                <td><input type="text" id="vt" name="vt"></td>
+            </tr>
+        </table>
+
+        <h4>Firma y Sello del Cliente</h4>
+        <table>
+            <tr>
+                <td><label for="nombre_cliente">Nombre:</label></td>
+                <td><input type="text" id="nombre_cliente" name="nombre_cliente"></td>
+                <td><label for="area_cliente">Área:</label></td>
+                <td><input type="text" id="area_cliente" name="area_cliente"></td>
+            </tr>
+        </table>
+
+        <h4>Observaciones</h4>
+        <table>
+            <tr>
+                <td><textarea name="observaciones" style="width: 100%; height: 100px;"></textarea></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script src="Script.js"></script> 
+
 </body>
 </html>
