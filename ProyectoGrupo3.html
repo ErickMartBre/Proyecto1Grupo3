@@ -47,7 +47,7 @@
         <table>
             <tr>
                 <td><label for="cliente">Cliente:</label></td>
-                <td><input type="text" id="cliente" name="cliente"></td>
+                <td><input type="text" id="cliente" name="cliente" required></td>
                 <td><label for="tecnico">Técnico:</label></td>
                 <td><input type="text" id="tecnico" name="tecnico"></td>
                 <td><label for="fecha">Fecha:</label></td>
@@ -101,13 +101,76 @@
                 <th>Cantidad</th>
                 <th>Estado</th>
             </tr>
+            <!-- Fila 1 -->
             <tr>
-                <td><input type="text" name="codigo_repuesto"></td>
-                <td><input type="text" name="descripcion_repuesto"></td>
-                <td><input type="text" name="cantidad_repuesto"></td>
-                <td><input type="text" name="estado_repuesto"></td>
+                <td><input type="text" name="codigo_repuesto1"></td>
+                <td><input type="text" name="descripcion_repuesto1"></td>
+                <td><input type="text" name="cantidad_repuesto1"></td>
+                <td><input type="text" name="estado_repuesto1"></td>
             </tr>
-            <!-- Agregar más filas si es necesario -->
+            <!-- Fila 2 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto2"></td>
+                <td><input type="text" name="descripcion_repuesto2"></td>
+                <td><input type="text" name="cantidad_repuesto2"></td>
+                <td><input type="text" name="estado_repuesto2"></td>
+            </tr>
+            <!-- Fila 3 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto3"></td>
+                <td><input type="text" name="descripcion_repuesto3"></td>
+                <td><input type="text" name="cantidad_repuesto3"></td>
+                <td><input type="text" name="estado_repuesto3"></td>
+            </tr>
+            <!-- Fila 4 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto4"></td>
+                <td><input type="text" name="descripcion_repuesto4"></td>
+                <td><input type="text" name="cantidad_repuesto4"></td>
+                <td><input type="text" name="estado_repuesto4"></td>
+            </tr>
+            <!-- Fila 5 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto5"></td>
+                <td><input type="text" name="descripcion_repuesto5"></td>
+                <td><input type="text" name="cantidad_repuesto5"></td>
+                <td><input type="text" name="estado_repuesto5"></td>
+            </tr>
+            <!-- Fila 6 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto6"></td>
+                <td><input type="text" name="descripcion_repuesto6"></td>
+                <td><input type="text" name="cantidad_repuesto6"></td>
+                <td><input type="text" name="estado_repuesto6"></td>
+            </tr>
+            <!-- Fila 7 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto7"></td>
+                <td><input type="text" name="descripcion_repuesto7"></td>
+                <td><input type="text" name="cantidad_repuesto7"></td>
+                <td><input type="text" name="estado_repuesto7"></td>
+            </tr>
+            <!-- Fila 8 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto8"></td>
+                <td><input type="text" name="descripcion_repuesto8"></td>
+                <td><input type="text" name="cantidad_repuesto8"></td>
+                <td><input type="text" name="estado_repuesto8"></td>
+            </tr>
+            <!-- Fila 9 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto9"></td>
+                <td><input type="text" name="descripcion_repuesto9"></td>
+                <td><input type="text" name="cantidad_repuesto9"></td>
+                <td><input type="text" name="estado_repuesto9"></td>
+            </tr>
+            <!-- Fila 10 -->
+            <tr>
+                <td><input type="text" name="codigo_repuesto10"></td>
+                <td><input type="text" name="descripcion_repuesto10"></td>
+                <td><input type="text" name="cantidad_repuesto10"></td>
+                <td><input type="text" name="estado_repuesto10"></td>
+            </tr>
         </table>
 
         <table>
@@ -159,6 +222,254 @@
             </tr>
         </table>
 
+        <div class="container">
+            <h4>Check List Servicio Técnico</h4>
+            <form action="tu_destino_aqui" method="POST">
+            
+            <!-- Tabla Ambiente de Trabajo -->
+            <table>
+                <tr>
+                    <th>N</th>
+                    <th>Ambiente de Trabajo</th>
+                    <th>Seleccionar</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Equipo expuesto a un ambiente adecuado</td>
+                    <td><input type="checkbox" name="ambiente"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Equipo con múltiples conexiones</td>
+                    <td><input type="checkbox" name="ambiente"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Toma a tierra</td>
+                    <td><input type="checkbox" name="ambiente"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Revisión nivel de voltaje adecuado estabilizado</td>
+                    <td><input type="checkbox" name="ambiente"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Limpieza externa/interna</td>
+                    <td><input type="checkbox" name="ambiente"></td>
+                </tr>
+            </table>
+    
+            <!-- Tabla Insumos Utilizados -->
+            <table>
+                <tr>
+                    <th>N</th>
+                    <th>Insumos Utilizados</th>
+                    <th>Seleccionar</th>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Tipo de papel adecuado</td>
+                    <td><input type="checkbox" name="insumos"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Verificación del uso de tóner original</td>
+                    <td><input type="checkbox" name="insumos"></td>
+                </tr>
+            </table>
+    
+            <!-- Contenedor para las dos tablas: Unidades y Accesorios -->
+            <div class="table-container">
+                <!-- Tabla de Unidades y Accesorios -->
+                <table class="table-half">
+                    <tr>
+                        <th>N</th>
+                        <th>Unidades y Accesorios</th>
+                        <th>Seleccionar</th>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sistema óptico</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Entorno del fotoconductor</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Unidad de limpieza</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Unidad de transferencia</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Unidad de revelado</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Unidad de alimentacion de papel</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Unidad de fusion y salida de papel</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Envase de toner residual</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Panel de operaciones y pulsadores</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Unidad duplex</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Bandeja de papel</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Sistema electrico y mecanico</td>
+                        <td><input type="checkbox" name="accesorios1"></td>
+                    </tr>
+                </table>
+    
+                <table class="table-half">
+                    <tr>
+                        <th>N</th>
+                        <th>Unidades y Accesorios</th>
+                        <th>Seleccionar</th>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Alimentador de originales</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Bandeja de gran capacidad</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Finalizador</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Mail Box</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Unidad láser</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Unidad by pass</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Unidad puente</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Unidad de intercambio</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Unidad de cubiertas</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Unidad de perforado y grapado</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Unidad de toner</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>Unidad de salida de papel</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>Tapas y cubiertas</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>Electrico</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>Mecánico</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>Impresión</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>Escaner</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>Fax</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>Sofware</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td>Dispositivo remoto</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>Configuracion</td>
+                        <td><input type="checkbox" name="accesorios2"></td>
+                    </tr>
+                </table>
+              
+            </div>
+            <div class="button-container">
+                <button type="submit" class="submit-button">Enviar Formulario</button>
+            </div>
+    
+            </form>
+      
     </div>
 
     <script src="Script.js"></script> 
