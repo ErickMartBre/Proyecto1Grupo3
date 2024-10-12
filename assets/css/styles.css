@@ -1,0 +1,95 @@
+/* Define la fuente por defecto para todo el cuerpo */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f9; /* Fondo suave para mejorar la legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* Las tablas ocupan todo el ancho disponible y no tienen separación entre celdas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio inferior entre la tabla y otros elementos */
+}
+
+/* Bordes y espaciado para celdas (td) y encabezados de tabla (th) */
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left; /* Texto alineado a la izquierda en celdas y encabezados */
+}
+
+/* Estilos para los campos de entrada (text, date, time) */
+input[type="text"], input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el ancho total */
+    border: 1px solid #ccc; /* Bordes sutiles por defecto */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+}
+
+/* Estilo del contenedor principal, con borde, padding y centrado en pantallas grandes */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd; /* Bordes más suaves */
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para contraste */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+}
+
+/* Alinea los títulos (h3 y h4) al centro */
+h3, h4 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo mejorado para el botón de envío */
+button.submit-button {
+    background-color: #4CAF50; /* Verde agradable */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button.submit-button:hover {
+    background-color: #45a049; /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+/* Para pantallas pequeñas, el contenedor ocupa el 100% del ancho */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Resaltar los campos que son obligatorios */
+input[required] {
+    border-left: 3px solid #ff5722; /* Bordes anaranjados para campos obligatorios */
+}
+
+/* Resaltar los campos con error */
+input.error {
+    border: 2px solid red; /* Bordes rojos si el campo no es válido */
+    background-color: #ffe6e6; /* Fondo rojo suave para mayor claridad */
+}
+
+/* Estilo para mejorar la legibilidad en dispositivos pequeños */
+table, td, th {
+    font-size: 14px; /* Texto más pequeño en dispositivos móviles */
+}
+
+/* Estilo para los mensajes de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
