@@ -197,3 +197,34 @@ window.onload = function() {
         enviarFormulario(); // Llama a la función para enviar los datos
     };
 };
+
+function downloadFormulario()
+{
+    const cliente = document.getElementById("cliente").value;
+    const tecnico = document.getElementById("tecnico").value;
+    const fecha = document.getElementById("fecha").value;
+    const modelo = document.getElementById("modelo").value;
+    const serie = document.getElementById("serie").value;
+    const motivoServicio = document.getElementById("motivo_servicio").value;
+    const condicionEquipo = document.getElementById("condicion").value;
+    const accionTomada = document.getElementById("accion").value;
+    const ubicacionFalla = document.getElementById("ubicacion_falla").value;
+    const tipoFalla = document.getElementById("tipo_falla").value;
+    const horaInicialViaje = document.getElementById("hora_inicial_viaje").value;
+    const horaFinalViaje = document.getElementById("hora_final_viaje").value;
+    const horaInicialTrabajo = document.getElementById("hora_inicial_trabajo").value;
+    const horaFinalTrabajo = document.getElementById("hora_final_trabajo").value;
+
+    const formulario = `Cliente: ${cliente}\nTécnico: ${tecnico}\nFecha: ${fecha}\nModelo: ${modelo}\nSerie: ${serie}
+Motivo del Servicio: ${motivoServicio}\nCondición del Equipo: ${condicionEquipo}\nAcción Tomada: ${accionTomada}
+Ubicación de la Falla: ${ubicacionFalla}\nTipo de Falla: ${tipoFalla}\nHora Inicial de Viaje: ${horaInicialViaje}
+Hora Final de Viaje: ${horaFinalViaje}\nHora Inicial del Trabajo: ${horaInicialTrabajo}\nHora Final del Trabajo: ${horaFinalTrabajo}`
+
+    const blob = new Blob([formulario], {type: "text/plain;charset=utf-8"});
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a')
+    a.setAttribute('href', url);
+    a.setAttribute('download', "Formulario_Boleta.txt");
+    a.click();
+}
